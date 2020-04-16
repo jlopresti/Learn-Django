@@ -1,0 +1,19 @@
+{% extends 'intranet/base.html' %}
+
+{% block title %}
+    User
+{% endblock %}
+
+{% block content %}
+ 
+{% if users %}
+    <ul>
+    {% for user in users %}
+        <li>{{ user.username }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Users.</p>
+{% endif %}
+ 
+{% endblock %}
