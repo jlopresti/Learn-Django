@@ -5,5 +5,6 @@ from . import views
 app_name = 'intranet'
 urlpatterns = [
     path('', views.wip, name='index'),
-    path('login/', views.LoginView.as_view(), name='login'),
+    path('auth/login', views.LoginView.as_view(), name='login'),
+    path('auth/logout', views.logout_view, name='logout'),
 ]

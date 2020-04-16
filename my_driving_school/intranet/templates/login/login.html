@@ -1,5 +1,5 @@
 {% load static %}
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -37,14 +37,19 @@
     <link href="{% static 'css/login.css' %}" rel="stylesheet" />
   </head>
   <body class="text-center">
-    <form class="form-signin">
+    <form class="form-signin" action="{% url 'intranet:login' %}" method="post">
+      {% csrf_token %}
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-      <label for="inputEmail" class="sr-only">Email address</label>
+      {% if error_message %}
+      <div class="alert alert-danger" role="alert">
+        {{ error_message }}
+      </div>{% endif %}
+      <label for="inputEmail" class="sr-only">Username</label>
       <input
-        type="email"
+        type="text"
         id="inputEmail"
         class="form-control"
-        placeholder="Email address"
+        placeholder="Username"
         required
         autofocus
       />
@@ -56,11 +61,6 @@
         placeholder="Password"
         required
       />
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me" /> Remember me
-        </label>
-      </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">
         Sign in
       </button>
