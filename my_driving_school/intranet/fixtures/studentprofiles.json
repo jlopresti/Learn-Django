@@ -1,0 +1,11 @@
+[
+{
+    "model": "intranet.studentprofile",
+    "pk": 1,
+    "fields": {
+        "user": 4,
+        "paid_hours": 0,
+        "available_hours": 0
+    }
+}
+]

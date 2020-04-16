@@ -1,0 +1,86 @@
+[
+  {
+    "model": "intranet.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$180000$nKIGk6Mi7rXi$asVr+g795vLKAR8d+tRMwzNDU/Rq7yDE5zgcFLOMF7w=",
+      "last_login": "2020-04-16T19:41:46Z",
+      "is_superuser": true,
+      "username": "Admin",
+      "first_name": "Admin",
+      "last_name": "Admin",
+      "email": "Admin@mydrivingschool.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-04-16T19:32:51Z",
+      "is_secretary": false,
+      "is_inspector": false,
+      "is_student": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "intranet.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$180000$nKIGk6Mi7rXi$asVr+g795vLKAR8d+tRMwzNDU/Rq7yDE5zgcFLOMF7w=",
+      "last_login": "2020-04-16T19:41:46Z",
+      "is_superuser": false,
+      "username": "Secretary",
+      "first_name": "Secretary",
+      "last_name": "Secretary",
+      "email": "Secretary@mydrivingschool.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-04-16T19:32:51Z",
+      "is_secretary": true,
+      "is_inspector": false,
+      "is_student": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "intranet.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$180000$nKIGk6Mi7rXi$asVr+g795vLKAR8d+tRMwzNDU/Rq7yDE5zgcFLOMF7w=",
+      "last_login": "2020-04-16T19:41:46Z",
+      "is_superuser": false,
+      "username": "Inspector",
+      "first_name": "Inspector",
+      "last_name": "Inspector",
+      "email": "Inspector@mydrivingschool.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-04-16T19:32:51Z",
+      "is_secretary": false,
+      "is_inspector": true,
+      "is_student": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "intranet.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$180000$nKIGk6Mi7rXi$asVr+g795vLKAR8d+tRMwzNDU/Rq7yDE5zgcFLOMF7w=",
+      "last_login": "2020-04-16T19:41:46Z",
+      "is_superuser": false,
+      "username": "Student",
+      "first_name": "Student",
+      "last_name": "Student",
+      "email": "Student@mydrivingschool.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-04-16T19:32:51Z",
+      "is_secretary": false,
+      "is_inspector": false,
+      "is_student": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

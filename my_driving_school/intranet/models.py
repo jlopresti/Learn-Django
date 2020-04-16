@@ -16,7 +16,7 @@ class StudentProfile(models.Model):
   
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
-	if instance.is_intern:
+	if instance.is_student:
 		StudentProfile.objects.get_or_create(user = instance)
 	
 @receiver(post_save, sender=User)
