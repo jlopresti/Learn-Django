@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.views import generic
+from django.utils.decorators import method_decorator
 
 from .forms import AdminUserCreationForm, SecretaryUserCreationForm
 from .models import User
@@ -62,6 +63,7 @@ def create_user(request):
  
     return render(request, 'users/create.html', {'form': f})
 
+@method_decorator(login_required, name='dispatch')
 class SecretariesView(generic.ListView):
     template_name = 'users/index.html'
     context_object_name = 'users'
@@ -69,6 +71,7 @@ class SecretariesView(generic.ListView):
     def get_queryset(self):
         return User.objects.filter(is_secretary=True)
 
+@method_decorator(login_required, name='dispatch')
 class InspectorsView(generic.ListView):
     template_name = 'users/index.html'
     context_object_name = 'users'
@@ -76,6 +79,7 @@ class InspectorsView(generic.ListView):
     def get_queryset(self):        
         return User.objects.filter(is_inspector=True)
 
+@method_decorator(login_required, name='dispatch')
 class StudentsView(generic.ListView):
     template_name = 'users/index.html'
     context_object_name = 'users'
