@@ -1,3 +1,11 @@
+from django.http import HttpResponse
+from django.views import View
 from django.shortcuts import render
 
-# Create your views here.
+class LoginView(View):
+    def get(self, request):
+        # <view logic>
+        return render(request, 'login/login.html')
+
+def wip(request):
+    return HttpResponse("OK")
